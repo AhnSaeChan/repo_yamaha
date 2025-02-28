@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>companyName</td>
+		<td>department</td>
+		<td>workingPosition</td>
+		<td>representCompany</td>
+		<td>addNaverAddress_seq</td>
+	</tr>
+	<tr th:each="list : ${list}"> 
+		<td th:text = "${list.seq}"></td>
+		<td th:text = "${list.companyName}"></td>
+		<td th:text = "${list.department}"></td>
+		<td th:text = "${list.workingPosition}"></td>
+		<td th:text = "${list.representCompany}"></td>
+		<td th:text = "${list.addNaverAddress_seq}"></td>
+	</tr>		
+</table>
+
+</body>
+</html>
