@@ -7,4 +7,5 @@ import com.a3a3.fapp.emailaddress.EmailaddressDto;
 public interface ComponyanddepartmentDao {
 
 	public List<ComponyanddepartmentDto> selectList();
+	public ComponyanddepartmentDto selectOne(ComponyanddepartmentDto componyanddepartmentDto);
 }

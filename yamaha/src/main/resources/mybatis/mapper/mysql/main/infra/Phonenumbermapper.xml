@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.a3a3.fapp.emailaddress.EmailaddressDao">
+<mapper namespace="com.a3a3.fapp.phonenumber.PhonenumberDao">
 
-	<resultMap id="resultMapObj" type="com.a3a3.fapp.emailaddress.EmailaddressDto"></resultMap>
+	<resultMap id="resultMapObj" type="com.a3a3.fapp.phonenumber.PhonenumberDto"></resultMap>
 	  
 	<select id="selectList" resultMap="resultMapObj">
-		SELECT
+		select
 			seq,
-		    email,
-		    rerepresenteEmail,
+		    cellPhoneType,
+		    phoneNumber,
+		    representPhoneNumber,
 		    addNaverAddress_seq
 		FROM
-			emailaddress
-		where 1=1
-		ORDER BY seq DESC
-	</select>
+			phonenumber
+		    WHERE 1=1
+		    ORDER BY seq DESC
 	
+	</select>
 	<select id="selectOne" resultMap="resultMapObj">
-		SELECT
+		SELECT 
 			seq,
-		    email
+		    cellPhoneType
 		FROM
-			emailaddress
-		where 1=1
+			phonenumber
+		WHERE 1=1
 			AND seq = #{seq}
 		ORDER BY seq DESC
 

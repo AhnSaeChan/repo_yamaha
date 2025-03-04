@@ -15,4 +15,11 @@ public class ComponyanddepartmentController {
 		model.addAttribute("list", componyanddepartmentService.selectList());
 		return "componyanddepartment/componyanddepartmentXdmList";
 	}
+	@RequestMapping(value = "/componyanddepartment/componyanddepartmentXdmView")
+	public String codeGroupXdmView(Model model, ComponyanddepartmentDto componyanddepartmentDto) {
+		System.out.println("componyanddepartmentDto/getseq():" + componyanddepartmentDto.getSeq());
+		model.addAttribute("item", componyanddepartmentService.selectOne(componyanddepartmentDto));
+		return "componyanddepartment/componyanddepartmentXdmView";
+	}
+	
 }

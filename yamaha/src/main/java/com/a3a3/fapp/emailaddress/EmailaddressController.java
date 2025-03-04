@@ -32,4 +32,14 @@ public class EmailaddressController {
 		model.addAttribute("list", emailaddressService.selectList());
 		return "emailaddress/emailaddressXdmList";
 	}
+	
+	
+	@RequestMapping(value = "/emailaddress/emailaddressXdmView")
+	public String codeGroupXdmView(Model model, EmailaddressDto emailaddressDto) {
+		
+		System.out.println("emailaddressDto/getSeq():"  + emailaddressDto.getSeq());
+		
+		model.addAttribute("item", emailaddressService.selectOne(emailaddressDto)); // 사용
+		return "emailaddress/emailaddressXdmView";
+	}
 }

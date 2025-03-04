@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>groupName</td>
+		<td>representGroup</td>
+		
+	</tr>
+	<tr th:each="list : ${list}"> 
+		<td th:text = "${list.seq}"></td>
+		<td th:text = "${list.groupName}"></td>
+		<td th:text = "${list.groupName}"></td>
+		
+	</tr>		
+</table>
+
+</body>
+</html>

@@ -15,7 +15,7 @@
 	</tr>
 	<tr th:each="list : ${list}"> 
 		<td th:text = "${list.seq}"></td>
-		<td th:text = "${list.companyName}"></td>
+		<td><a th:href="@{/componyanddepartment/componyanddepartmentXdmView(seq=${list.seq})}" th:text = "${list.companyName}"></a></td>
 		<td th:text = "${list.department}"></td>
 		<td th:text = "${list.workingPosition}"></td>
 		<td th:text = "${list.representCompany}"></td>

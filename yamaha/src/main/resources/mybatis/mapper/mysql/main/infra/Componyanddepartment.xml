@@ -20,4 +20,17 @@
 	
 	</select>
 	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			seq,
+		    companyName
+		FROM
+			componyanddepartment
+		WHERE 1=1
+			AND seq = #{seq}
+		ORDER BY seq DESC
+	
+	</select>	
+	
+	
 </mapper>

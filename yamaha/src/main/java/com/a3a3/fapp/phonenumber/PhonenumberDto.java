@@ -4,6 +4,7 @@ public class PhonenumberDto {
 	
 	private String seq;
 	private String cellPhoneType;
+	private String phoneNumber;
 	private Integer representPhoneNumber;
 	private Integer addNaverAddress_seq;
 //	-----
@@ -19,6 +20,12 @@ public class PhonenumberDto {
 	public void setCellPhoneType(String cellPhoneType) {
 		this.cellPhoneType = cellPhoneType;
 	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 	public Integer getRepresentPhoneNumber() {
 		return representPhoneNumber;
 	}
@@ -31,5 +38,6 @@ public class PhonenumberDto {
 	public void setAddNaverAddress_seq(Integer addNaverAddress_seq) {
 		this.addNaverAddress_seq = addNaverAddress_seq;
 	}
+	
 	
 }

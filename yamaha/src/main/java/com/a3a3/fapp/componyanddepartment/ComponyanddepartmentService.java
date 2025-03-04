@@ -13,4 +13,7 @@ ComponyanddepartmentDao componyanddepartmentDaos;
 public List<ComponyanddepartmentDto> selectList(){
 	 return componyanddepartmentDaos.selectList();
 	}
+public ComponyanddepartmentDto selectOne(ComponyanddepartmentDto componyanddepartmentDto){
+	 return componyanddepartmentDaos.selectOne(componyanddepartmentDto);
+	}
 }

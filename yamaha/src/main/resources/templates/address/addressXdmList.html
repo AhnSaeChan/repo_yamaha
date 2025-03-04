@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>addressType</td>
+		<td>zipCode</td>
+		<td>searchZipCode</td>
+		<td>fullAddress</td>
+		<td>representAddress</td>
+		<td>addNaverAddress_seq</td>
+	</tr>
+	<tr th:each="list : ${list}"> 
+		<td th:text = "${list.seq}"></td>
+		<td th:text = "${list.addressType}"></td>
+		<td th:text = "${list.zipCode}"></td>
+		<td th:text = "${list.searchZipCode}"></td>
+		<td th:text = "${list.fullAddress}"></td>
+		<td th:text = "${list.representAddress}"></td>
+		<td th:text = "${list.addNaverAddress_seq}"></td>
+	</tr>		
+</table>
+
+</body>
+</html>

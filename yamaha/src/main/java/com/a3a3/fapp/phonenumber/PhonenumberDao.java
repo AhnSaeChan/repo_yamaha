@@ -9,4 +9,5 @@ import com.a3a3.fapp.emailaddress.EmailaddressDto;
 @Repository
 public interface PhonenumberDao {
 	public List<PhonenumberDto> selectList();
+	public PhonenumberDto selectOne(PhonenumberDto phonenumberDto);
 }

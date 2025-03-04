@@ -11,9 +11,15 @@ public class PhonenumberController {
 	@Autowired
 	PhonenumberService phonenumberService;
 	
-	@RequestMapping(value = "/phonenumbe/phonenumbeXdmList")
+	@RequestMapping(value = "/phonenumber/phonenumberXdmList")
 	public String codeGroupXdmList(Model model) {
 		model.addAttribute("list", phonenumberService.selectList());
-		return "phonenumber/phonenumbeXdmList";
+		return "phonenumber/phonenumberXdmList";
+	}
+	@RequestMapping(value = "/phonenumber/phonenumberXdmView")
+	public String codeGroupXdmView(Model model ,PhonenumberDto phonenumberDto) {
+		System.out.println("phonenumberDto/getSeq():"  + phonenumberDto.getSeq());
+		model.addAttribute("item", phonenumberService.selectOne(phonenumberDto));
+		return "phonenumber/phonenumberXdmView";
 	}
 }

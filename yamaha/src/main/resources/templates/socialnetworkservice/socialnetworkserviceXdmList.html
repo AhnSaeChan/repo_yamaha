@@ -7,14 +7,16 @@
 <table>
 	<tr>
 		<td>seq</td>
-		<td>email</td>
-		<td>rerepresenteEmail</td>
+		<td>snsType</td>
+		<td>snsAddress</td>
+		<td>representSns</td>
 		<td>addNaverAddress_seq</td>
 	</tr>
 	<tr th:each="list : ${list}"> 
 		<td th:text = "${list.seq}"></td>
-		<td><a th:href="@{/emailaddress/emailaddressXdmView(seq=${list.seq})}" th:text = "${list.email}"></a></td>
-		<td th:text = "${list.rerepresenteEmail}"></td>
+		<td th:text = "${list.snsType}"></td>
+		<td th:text = "${list.snsAddress}"></td>
+		<td th:text = "${list.representSns}"></td>
 		<td th:text = "${list.addNaverAddress_seq}"></td>
 	</tr>		
 </table>

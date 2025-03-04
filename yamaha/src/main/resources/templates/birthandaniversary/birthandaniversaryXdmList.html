@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>birthdayType</td>
+		<td>birthSolarCalendar</td>
+		<td>birthLunarCalendar</td>
+		<td>pickSolarCalendar</td>
+		<td>pickLunarCalendar</td>
+		<td>representBirthday</td>
+		<td>addNaverAddress_seq</td>
+	</tr>
+	<tr th:each="list : ${list}"> 
+		<td th:text = "${list.seq}"></td>
+		<td th:text = "${list.birthdayType}"></td>
+		<td th:text = "${list.birthSolarCalendar}"></td>
+		<td th:text = "${list.birthLunarCalendar}"></td>
+		<td th:text = "${list.pickSolarCalendar}"></td>
+		<td th:text = "${list.pickLunarCalendar}"></td>
+		<td th:text = "${list.representBirthday}"></td>
+		<td th:text = "${list.addNaverAddress_seq}"></td>
+	</tr>		
+</table>
+
+</body>
+</html>

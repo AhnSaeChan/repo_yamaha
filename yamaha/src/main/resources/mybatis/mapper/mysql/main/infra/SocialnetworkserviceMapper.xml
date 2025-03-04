@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.a3a3.fapp.socialnetworkservice.SocialnetworkserviceDao">
+
+	<resultMap id="resultMapObj" type="com.a3a3.fapp.socialnetworkservice.SocialnetworkserviceDto"></resultMap>
+	  
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT
+			seq,
+		    snsType,
+		    snsAddress,
+		    representSns,
+		    addNaverAddress_seq
+		FROM
+			socialnetworkservice
+		WHERE 1=1
+		ORDER BY seq DESC
+	
+	</select>
+	
+</mapper>

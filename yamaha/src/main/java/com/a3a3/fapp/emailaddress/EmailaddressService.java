@@ -28,4 +28,7 @@ public class EmailaddressService {
 	 public List<EmailaddressDto> selectList(){
 	 return emailaddressDaos.selectList();
 	}
+	 public EmailaddressDto selectOne(EmailaddressDto emailaddressDto){ // 함수를 선언 ,Dto를 받겠다고 선언
+		 return emailaddressDaos.selectOne(emailaddressDto); //하나씩 추가, 함수를 사용
+	 }
 }

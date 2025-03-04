@@ -13,4 +13,7 @@ public class PhonenumberService {
 	public List<PhonenumberDto> selectList(){
 		return phonenumberDaos.selectList();
 	}
+	public PhonenumberDto selectOne(PhonenumberDto phonenumberDto){
+		return phonenumberDaos.selectOne(phonenumberDto);
+	}
 }
