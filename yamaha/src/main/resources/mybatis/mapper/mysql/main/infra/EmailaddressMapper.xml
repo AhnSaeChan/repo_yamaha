@@ -29,4 +29,23 @@
 
 	</select>
 	
+	<insert id="insert">
+	INSERT INTO emailaddress(
+	
+		email,
+		rerepresenteEmail,
+		addNaverAddress_seq
+		)
+		values(
+		
+		#{email},
+		#{rerepresenteEmail},
+		#{addNaverAddress_seq}
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
+	
 </mapper>

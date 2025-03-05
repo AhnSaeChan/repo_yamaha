@@ -15,4 +15,30 @@ public class AddnaveraddressController {
 		model.addAttribute("list", addnaveraddressService.selectList());
 		return "addnaveraddress/addnaveraddressXdmList";
 	}
+	@RequestMapping(value = "/addnaveraddress/addnaveraddressXdmView")
+	public String codeGroupXdmView(Model model, AddnaveraddressDto addnaveraddressDto ) {
+		
+		System.out.println("addnaveraddressDto/getSeq():"  + addnaveraddressDto.getSeq());
+		
+		model.addAttribute("item", addnaveraddressService.selectOne(addnaveraddressDto));
+		return "addnaveraddress/addnaveraddressXdmView";
+	}
+	@RequestMapping(value = "/addnaveraddress/addnaveraddressXdmForm")
+	public String addnaveraddressXdmForm() {
+		
+		return "addnaveraddress/addnaveraddressXdmForm";
+	}
+	@RequestMapping(value = "/addnaveraddress/addnaveraddressXdmInst")
+	public String addnaveraddressXdmInst(Model model, AddnaveraddressDto addnaveraddressDto) {
+		
+		System.out.println("addnaveraddressDto/getSeq():"  + addnaveraddressDto.getSeq());
+		System.out.println("addnaveraddressDto/getSeq():"  + addnaveraddressDto.getSeq());
+		
+		addnaveraddressService.insert(addnaveraddressDto);
+		
+		System.out.println("emailaddressDto.getSeq():" + addnaveraddressDto.getSeq());
+		
+		
+		return "redirect:/addnaveraddress/addnaveraddressXdmList";
+	}
 }

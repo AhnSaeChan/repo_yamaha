@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/emailaddress/emailaddressXdmInst" method="post" id="form">
+	seq:<Input type="text" name ="seq" id="seq" maxlength="10" disabled/> 
+	email:<Input type="text" name="email" id="email" placeholder="email을 입력해 주세요"/>
+	representeEmail:<Input type="text" name ="rerepresenteEmail" id="rerepresenteEmail"/>
+	addNaverAddress:<Input type="text" name="addNaverAddress_seq" id="addNaverAddress_seq"/>
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick = function(){
+		document.getElementById("form").submit();
+	}
+	
+	
+//	document.getElementById("btnSave").onclick = function(){
+//		alert("alertsave");
+//	}
+//	document.getElementById("email").onclick = function(){
+//		alert("email");
+//	}
+//	document.getElementById("rerepresenteEmail").onclick = function(){
+//		alert("rerepresenteEmail");
+//	}
+//	document.getElementById("addNaverAddress_seq").onclick = function(){
+//	alert("addNaverAddress_seq");
+//	}
+	
+	
+	
+</script>
+
+
+</body>
+</html>

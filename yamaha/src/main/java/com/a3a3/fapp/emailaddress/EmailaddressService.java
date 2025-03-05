@@ -1,6 +1,5 @@
 package com.a3a3.fapp.emailaddress;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +29,8 @@ public class EmailaddressService {
 	}
 	 public EmailaddressDto selectOne(EmailaddressDto emailaddressDto){ // 함수를 선언 ,Dto를 받겠다고 선언
 		 return emailaddressDaos.selectOne(emailaddressDto); //하나씩 추가, 함수를 사용
+	 }
+	 public int insert(EmailaddressDto emailaddressDto){ // 함수를 선언 ,Dto를 받겠다고 선언
+		 return emailaddressDaos.insert(emailaddressDto); //하나씩 추가, 함수를 사용
 	 }
 }

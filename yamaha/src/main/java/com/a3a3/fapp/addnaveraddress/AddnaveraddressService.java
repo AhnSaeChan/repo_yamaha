@@ -13,4 +13,11 @@ AddnaveraddressDao addnaveraddressDaos;
 public List<AddnaveraddressDto> selectList(){
 	return addnaveraddressDaos.selectList();
 }
+public AddnaveraddressDto selectOne(AddnaveraddressDto addnaveraddressDto){
+	return addnaveraddressDaos.selectOne(addnaveraddressDto);
+}
+
+public int insert(AddnaveraddressDto addnaveraddressDto){
+	return addnaveraddressDaos.insert(addnaveraddressDto);
+}
 }

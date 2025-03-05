@@ -24,5 +24,16 @@
 		ORDER BY seq DESC
 	
 	</select>
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			seq,
+		    photoRegistration
+		FROM
+			addnaveraddress
+		WHERE 1=1
+			AND seq = #{seq}
+		ORDER BY seq DESC
+	
+	</select>
 	
 </mapper>

@@ -4,4 +4,6 @@ import java.util.List;
 
 public interface AddnaveraddressDao {
 	public List<AddnaveraddressDto> selectList();
+	public AddnaveraddressDto selectOne(AddnaveraddressDto addnaveraddressDto);
+	public int insert(AddnaveraddressDto addnaveraddressDto);
 }

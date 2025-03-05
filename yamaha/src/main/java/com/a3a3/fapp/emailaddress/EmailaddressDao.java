@@ -12,5 +12,5 @@ public interface EmailaddressDao {
 	
 	public List<EmailaddressDto> selectList(); // 추상 메서드
 	public EmailaddressDto selectOne(EmailaddressDto emailaddressDto);	 //mapper의 추상 메서드를 하나로 제한한다
-	
+	public int insert(EmailaddressDto emailaddressDto);
 }

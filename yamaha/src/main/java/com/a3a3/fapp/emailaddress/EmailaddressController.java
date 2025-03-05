@@ -42,4 +42,21 @@ public class EmailaddressController {
 		model.addAttribute("item", emailaddressService.selectOne(emailaddressDto)); // 사용
 		return "emailaddress/emailaddressXdmView";
 	}
+	@RequestMapping(value = "/emailaddress/emailaddressXdmForm")
+	public String emailaddressXdmForm() {
+		
+		
+		return "emailaddress/emailaddressXdmForm";
+	}
+	@RequestMapping(value = "/emailaddress/emailaddressXdmInst")
+	public String emailaddressXdmInst(EmailaddressDto emailaddressDto) {
+		System.out.println("emailaddressDto.getSeq():" + emailaddressDto.getSeq());
+		System.out.println("emailaddressDto.getEmail():" + emailaddressDto.getEmail());
+		
+		emailaddressService.insert(emailaddressDto);
+		
+		System.out.println("emailaddressDto.getSeq():" + emailaddressDto.getSeq());
+		
+		return "redirect:/emailaddress/emailaddressXdmList";
+	}
 }
