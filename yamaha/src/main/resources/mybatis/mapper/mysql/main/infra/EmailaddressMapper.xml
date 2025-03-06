@@ -46,6 +46,16 @@
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
+	<update id="update">
+		
+		UPDATE emailaddress SET
+		
+		email = #{email},
+		rerepresenteEmail = #{rerepresenteEmail},
+		addNaverAddress_seq = #{addNaverAddress_seq}
+		
+		WHERE seq = #{seq}
+	</update>
 	
 	
 </mapper>

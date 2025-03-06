@@ -8,4 +8,6 @@ public interface ComponyanddepartmentDao {
 
 	public List<ComponyanddepartmentDto> selectList();
 	public ComponyanddepartmentDto selectOne(ComponyanddepartmentDto componyanddepartmentDto);
+	public int insert(ComponyanddepartmentDto componyanddepartmentDto);
+	public int update(ComponyanddepartmentDto componyanddepartmentDto);
 }

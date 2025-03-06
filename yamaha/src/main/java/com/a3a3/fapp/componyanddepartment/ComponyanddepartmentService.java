@@ -16,4 +16,10 @@ public List<ComponyanddepartmentDto> selectList(){
 public ComponyanddepartmentDto selectOne(ComponyanddepartmentDto componyanddepartmentDto){
 	 return componyanddepartmentDaos.selectOne(componyanddepartmentDto);
 	}
+public int insert(ComponyanddepartmentDto componyanddepartmentDto){
+	 return componyanddepartmentDaos.insert(componyanddepartmentDto);
+	}
+public int update(ComponyanddepartmentDto componyanddepartmentDto){
+	 return componyanddepartmentDaos.update(componyanddepartmentDto);
+	}
 }

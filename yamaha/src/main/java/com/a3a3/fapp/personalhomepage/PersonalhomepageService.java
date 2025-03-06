@@ -13,4 +13,13 @@ PersonalhomepageDao personalhomepageDoas;
 public List<PersonalhomepageDto> selectList(){
 	return personalhomepageDoas.selectList();
 }
+public PersonalhomepageDto selectOne(PersonalhomepageDto personalhomepageDto){
+	return personalhomepageDoas.selectOne(personalhomepageDto);
+}
+public int insert(PersonalhomepageDto personalhomepageDto){
+	return personalhomepageDoas.insert(personalhomepageDto);
+}
+public int update(PersonalhomepageDto personalhomepageDto){
+	return personalhomepageDoas.update(personalhomepageDto);
+}
 }

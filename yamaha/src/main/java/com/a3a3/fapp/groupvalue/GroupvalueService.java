@@ -13,4 +13,13 @@ GroupvalueDao groupvalueDaos;
 public List<GroupvalueDto> selectList(){
 	return groupvalueDaos.selectList();
 }
+public GroupvalueDto selectOne(GroupvalueDto groupvalueDto){
+	return groupvalueDaos.selectOne(groupvalueDto);
+}
+public int insert(GroupvalueDto groupvalueDto){
+	return groupvalueDaos.insert(groupvalueDto);
+}
+public int update(GroupvalueDto groupvalueDto){
+	return groupvalueDaos.update(groupvalueDto);
+}
 }

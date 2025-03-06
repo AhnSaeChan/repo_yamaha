@@ -29,7 +29,7 @@ public class AddnaveraddressController {
 		return "addnaveraddress/addnaveraddressXdmForm";
 	}
 	@RequestMapping(value = "/addnaveraddress/addnaveraddressXdmInst")
-	public String addnaveraddressXdmInst(Model model, AddnaveraddressDto addnaveraddressDto) {
+	public String addnaveraddressXdmInst(AddnaveraddressDto addnaveraddressDto) {
 		
 		System.out.println("addnaveraddressDto/getSeq():"  + addnaveraddressDto.getSeq());
 		System.out.println("addnaveraddressDto/getSeq():"  + addnaveraddressDto.getSeq());
@@ -40,5 +40,29 @@ public class AddnaveraddressController {
 		
 		
 		return "redirect:/addnaveraddress/addnaveraddressXdmList";
+		
+		
 	}
+	@RequestMapping(value = "/addnaveraddress/addnaveraddressXdmMform")
+	public String addnaveraddressXdmMform(Model model, AddnaveraddressDto addnaveraddressDto) {
+		
+		System.out.println("addnaveraddressDto/getSeq():"  + addnaveraddressDto.getSeq());
+		
+		model.addAttribute("item", addnaveraddressService.selectOne(addnaveraddressDto));
+		
+		
+		return "/addnaveraddress/addnaveraddressXdmMform";
+		
+		
+	}
+	@RequestMapping(value = "/addnaveraddress/addnaveraddressXdmUpdt")
+	public String addnaveraddressXdmUpdt(AddnaveraddressDto addnaveraddressDto) {
+		
+		addnaveraddressService.update(addnaveraddressDto);
+		
+		return "redirect:/addnaveraddress/addnaveraddressXdmList";
+		
+		
+	}
+
 }

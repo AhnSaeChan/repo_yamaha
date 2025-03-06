@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/birthandaniversary/birthandaniversaryXdmInst" method="post" id="form">
+	seq:<Input type="text" name ="seq" id="seq" maxlength="10" disabled/> 
+	birthdayType:<Input type="text" name="birthdayType" id="birthdayType"/>
+	birthSolarCalendar:<Input type="text" name ="birthSolarCalendar" id="birthSolarCalendar"/>
+	birthLunarCalendar:<Input type="text" name="birthLunarCalendar" id="birthLunarCalendar"/>
+	pickSolarCalendar:<Input type="text" name="pickSolarCalendar" id="pickSolarCalendar"/>
+	pickLunarCalendar:<Input type="text" name="pickLunarCalendar" id="pickLunarCalendar"/>
+	representBirthday:<Input type="text" name="representBirthday" id="representBirthday"/>
+	addNaverAddress_seq:<Input type="text" name="addNaverAddress_seq" id="addNaverAddress_seq"/>
+	
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+document.getElementById("btnSave").onclick = function(){
+	document.getElementById("form").submit();
+}
+
+</script>
+
+
+</body>
+</html>

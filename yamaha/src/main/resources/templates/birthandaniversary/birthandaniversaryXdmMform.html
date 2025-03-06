@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/birthandaniversary/birthandaniversaryXdmUpdt" method="post" id="form">
+<input type="hidden" name="seq" th:value="${item?.seq}"/>
+	seq:<Input type="text" name ="seq" id="seq" maxlength="10" disabled th:value ="${item?.seq}"/> 
+	birthdayType:<Input type="text" name="birthdayType" id="birthdayType" th:value ="${item?.birthdayType}"/>
+	birthSolarCalendar:<Input type="text" name ="birthSolarCalendar" id="birthSolarCalendar" th:value ="${item?.birthSolarCalendar}"/>
+	birthLunarCalendar:<Input type="text" name="birthLunarCalendar" id="birthLunarCalendar" th:value ="${item?.birthLunarCalendar}"/>
+	pickSolarCalendar:<Input type="text" name="pickSolarCalendar" id="pickSolarCalendar" th:value ="${item?.pickSolarCalendar}"/>
+	pickLunarCalendar:<Input type="text" name="pickLunarCalendar" id="pickLunarCalendar" th:value ="${item?.pickLunarCalendar}"/>
+	representBirthday:<Input type="text" name="representBirthday" id="representBirthday" th:value ="${item?.representBirthday}"/>
+	addNaverAddress_seq:<Input type="text" name="addNaverAddress_seq" id="addNaverAddress_seq" th:value ="${item?.addNaverAddress_seq}"/>
+	
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+document.getElementById("btnSave").onclick = function(){
+	document.getElementById("form").submit();
+}
+
+</script>
+
+
+</body>
+</html>

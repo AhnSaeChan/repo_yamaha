@@ -13,11 +13,12 @@
 	</tr>
 	<tr th:each="list : ${list}"> 
 		<td th:text = "${list.seq}"></td>
-		<td th:text = "${list.groupName}"></td>
-		<td th:text = "${list.groupName}"></td>
+		<td><a th:href="@{/groupinput/groupinputXdmView(seq=${list.seq})}" th:text = "${list.groupName}"></a></td>
+		<td th:text = "${list.representGroup}"></td>
 		
 	</tr>		
 </table>
-
+<br>
+<a href="/groupinput/groupinputXdmForm">등록</a>
 </body>
 </html>

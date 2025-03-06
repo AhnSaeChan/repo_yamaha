@@ -59,4 +59,21 @@ public class EmailaddressController {
 		
 		return "redirect:/emailaddress/emailaddressXdmList";
 	}
+	@RequestMapping(value = "/emailaddress/emailaddressXdmMform")
+	public String emailaddressXdmMform(Model model, EmailaddressDto emailaddressDto) {
+		
+		System.out.println("emailaddressDto.getSeq():" + emailaddressDto.getSeq());
+		
+		model.addAttribute("item", emailaddressService.selectOne(emailaddressDto));
+		
+		return "/emailaddress/emailaddressXdmMform";
+	}
+	@RequestMapping(value = "/emailaddress/emailaddressXdmUpdt")
+	public String emailaddressXdmUpdt(EmailaddressDto emailaddressDto) {
+		
+		emailaddressService.update(emailaddressDto);
+		
+		return "redirect:/emailaddress/emailaddressXdmList";
+	}
+	
 }

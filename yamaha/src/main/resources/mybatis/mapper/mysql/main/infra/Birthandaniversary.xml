@@ -21,6 +21,53 @@
 		ORDER BY seq DESC
 	
 	</select>
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+		seq,
+	    birthdayType
+	FROM
+		birthandaniversary
+	WHERE 1=1
+		AND seq = #{seq}
+	ORDER BY seq DESC
+	
+	</select>
+	<insert id="insert">
+	INSERT INTO birthandaniversary(
+		
+		birthdayType,
+		birthSolarCalendar,
+		birthLunarCalendar,
+		pickSolarCalendar,
+		pickLunarCalendar,
+		representBirthday,
+		addNaverAddress_seq
+	)VALUES(
+		
+		#{birthdayType},
+		#{birthSolarCalendar},
+		#{birthLunarCalendar},
+		#{pickSolarCalendar},
+		#{pickLunarCalendar},
+		#{representBirthday},
+		#{addNaverAddress_seq}
+	)
+	<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	<update id="update">
+	UPDATE birthandaniversary SET
+		
+		birthdayType = #{birthdayType},
+		birthSolarCalendar = #{birthSolarCalendar},
+		birthLunarCalendar = #{birthLunarCalendar},
+		pickSolarCalendar = #{pickSolarCalendar},
+		pickLunarCalendar = #{pickLunarCalendar},
+		representBirthday = #{representBirthday},
+		addNaverAddress_seq = #{addNaverAddress_seq}
+	WHERE seq = #{seq}
+	</update>
 	
 	
 	

@@ -13,4 +13,14 @@ AddressDao addressDaos;
 public List<AddressDto> selectList(){
 	return addressDaos.selectList();
 }
+public AddressDto selectOne(AddressDto addressDto){
+	return addressDaos.selectOne(addressDto);
+}
+public int insert(AddressDto addressDto){
+	return addressDaos.insert(addressDto);
+}
+public int update(AddressDto addressDto){
+	return addressDaos.update(addressDto);
+}
+
 }

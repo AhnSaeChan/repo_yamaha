@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/groupvalue/groupvalueXdmUpdt" method="post" id="form">
+<input type="hidden" name="seq" th:value="${item?.seq}"/>
+	seq:<Input type="text" name ="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/> 
+	addNaverAddress_seq:<Input type="text" name="addNaverAddress_seq" id="addNaverAddress_seq" th:value="${item?.addNaverAddress_seq}"/>
+	groupInput_seq:<Input type="text" name ="groupInput_seq" id="groupInput_seq" th:value="${item?.groupInput_seq}"/>
+	
+	
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+document.getElementById("btnSave").onclick = function(){
+	document.getElementById("form").submit();
+}
+
+</script>
+
+
+</body>
+</html>

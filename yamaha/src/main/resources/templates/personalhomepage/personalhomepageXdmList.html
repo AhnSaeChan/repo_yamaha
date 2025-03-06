@@ -13,11 +13,12 @@
 	</tr>
 	<tr th:each="list : ${list}"> 
 		<td th:text = "${list.seq}"></td>
-		<td th:text = "${list.homePageAddress}"></td>
+		<td><a th:href="@{/personalhomepage/personalhomepageXdmView(seq=${list.seq})}" th:text = "${list.homePageAddress}"></a></td>
 		<td th:text = "${list.representhomePage}"></td>
 		<td th:text = "${list.addNaverAddress_seq}"></td>
 	</tr>		
 </table>
-
+<br>
+<a href="/personalhomepage/personalhomepageXdmForm">등록</a>
 </body>
 </html>

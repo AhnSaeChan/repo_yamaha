@@ -7,22 +7,19 @@
 <table>
 	<tr>
 		<td>seq</td>
-		<td>email</td>
+		<td>addNaverAddress_seq</td>
+		
 		
 	</tr>
-	<tr> 
+	<tr>
 		<td th:text = "${item.seq}"></td>
-		<td th:text = "${item.email}"></td>
-		
+		<td th:text = "${item.addNaverAddress_seq}"></td>
 		
 		
 	</tr>		
 </table>
-
-<a href="/emailaddress/emailaddressXdmList">목록</a>
+<a href="/groupvalue/groupvalueXdmList">목록</a>
 <a>삭제</a>
-<a th:href="@{/emailaddress/emailaddressXdmMform(seq=${item.seq})}">수정</a>
-
-
+<a th:href="@{/groupvalue/groupvalueXdmMform(seq=${item.seq})}">수정</a>
 </body>
 </html>

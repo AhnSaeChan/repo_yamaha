@@ -18,6 +18,46 @@
 			
 	</select>
 	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			seq,
+		    homePageAddress
+		    
+		FROM
+			personalhomepage
+		WHERE 1=1
+			AND seq = #{seq}
+		ORDER BY seq DESC
+
+	</select>
+	<insert id="insert">
+	
+	
+		INSERT INTO personalhomepage(
+		
+		homePageAddress,
+		representhomePage,
+		addNaverAddress_seq
+		)VALUES(
+		
+		#{homePageAddress},
+		#{representhomePage},
+		#{addNaverAddress_seq}
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	<update id="update">
+	UPDATE personalhomepage SET
+	
+	homePageAddress = #{homePageAddress},
+	representhomePage = #{representhomePage},
+	addNaverAddress_seq = #{addNaverAddress_seq} 
+	
+	WHERE seq = #{seq}
+	</update>
+	
 	
 	
 	

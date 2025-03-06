@@ -17,7 +17,7 @@
 	</tr>
 	<tr th:each="list : ${list}"> 
 		<td th:text = "${list.seq}"></td>
-		<td th:text = "${list.birthdayType}"></td>
+		<td><a th:href="@{/birthandaniversary/birthandaniversaryXdmView(seq=${list.seq})}" th:text = "${list.birthdayType}"></a></td>
 		<td th:text = "${list.birthSolarCalendar}"></td>
 		<td th:text = "${list.birthLunarCalendar}"></td>
 		<td th:text = "${list.pickSolarCalendar}"></td>
@@ -26,6 +26,8 @@
 		<td th:text = "${list.addNaverAddress_seq}"></td>
 	</tr>		
 </table>
+<br>
+<a href="/birthandaniversary/birthandaniversaryXdmForm">등록</a>
 
 </body>
 </html>

@@ -17,4 +17,40 @@
 	
 	</select>
 	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			seq,
+		    groupName
+		FROM
+			groupinput
+		WHERE 1=1
+			AND seq = #{seq}
+		ORDER BY seq DESC
+	
+	</select>
+	
+	<insert id="insert">
+	INSERT INTO groupinput(
+		
+		groupName,
+		representGroup
+	)VALUES(
+		
+		#{groupName},
+		#{representGroup}
+		)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
+	<update id="update">
+	UPDATE groupinput SET
+		groupName = #{groupName},
+		representGroup = #{representGroup}
+		
+		
+		WHERE seq = #{seq}
+	</update>
+	
 </mapper>

@@ -16,7 +16,7 @@
 	</tr>
 	<tr th:each="list : ${list}"> 
 		<td th:text = "${list.seq}"></td>
-		<td th:text = "${list.addressType}"></td>
+		<td><a th:href="@{/address/addressXdmView(seq=${list.seq})}" th:text = "${list.addressType}"></a></td>
 		<td th:text = "${list.zipCode}"></td>
 		<td th:text = "${list.searchZipCode}"></td>
 		<td th:text = "${list.fullAddress}"></td>
@@ -24,6 +24,8 @@
 		<td th:text = "${list.addNaverAddress_seq}"></td>
 	</tr>		
 </table>
+<br>
+<a href="/address/addressXdmForm">등록</a>
 
 </body>
 </html>

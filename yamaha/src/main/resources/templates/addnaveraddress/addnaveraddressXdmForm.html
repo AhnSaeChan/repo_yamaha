@@ -4,9 +4,9 @@
 </head>
 <body>
 
-<form action="/emailaddress/emailaddressXdmInst" method="post" id="form">
+<form action="/addnaveraddress/addnaveraddressXdmInst" method="post" id="form">
 	seq:<Input type="text" name ="seq" id="seq" maxlength="10" disabled/> 
-	photoRegistration:<Input type="text" name="photoRegistration" id="photoRegistration" placeholder="email을 입력해 주세요"/>
+	photoRegistration:<Input type="text" name="photoRegistration" id="photoRegistration"/>
 	addFavorite:<Input type="text" name ="addFavorite" id="addFavorite"/>
 	termOfRespect:<Input type="text" name="termOfRespect" id="termOfRespect"/>
 	firstName:<Input type="text" name="firstName" id="firstName"/>
@@ -19,6 +19,15 @@
 	
 	<button type="button" id="btnSave">저장</button>
 </form>
+
+<script type="text/javascript">
+
+document.getElementById("btnSave").onclick = function(){
+	document.getElementById("form").submit();
+}
+
+</script>
+
 
 </body>
 </html>

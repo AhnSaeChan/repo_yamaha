@@ -20,4 +20,8 @@ public AddnaveraddressDto selectOne(AddnaveraddressDto addnaveraddressDto){
 public int insert(AddnaveraddressDto addnaveraddressDto){
 	return addnaveraddressDaos.insert(addnaveraddressDto);
 }
+
+public int update(AddnaveraddressDto addnaveraddressDto){
+	return addnaveraddressDaos.update(addnaveraddressDto);
+}
 }

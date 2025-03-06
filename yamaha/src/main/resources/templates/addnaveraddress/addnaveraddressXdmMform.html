@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/addnaveraddress/addnaveraddressXdmUpdt" method="post" id="form">
+	<input type="hidden" name="seq" th:value="${item?.seq}"/>
+	seq:<Input type="text" name ="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/> 
+	photoRegistration:<Input type="text" name="photoRegistration" id="photoRegistration" th:value="${item?.photoRegistration}"/>
+	addFavorite:<Input type="text" name ="addFavorite" id="addFavorite" th:value="${item?.addFavorite}"/>
+	termOfRespect:<Input type="text" name="termOfRespect" id="termOfRespect" th:value="${item?.termOfRespect}"/>
+	firstName:<Input type="text" name="firstName" id="firstName" th:value="${item?.firstName}"/>
+	middleName:<Input type="text" name="middleName" id="middleName" th:value="${item?.middleName}"/>
+	lastName:<Input type="text" name="lastName" id="lastName" th:value="${item?.lastName}"/>
+	titleName:<Input type="text" name="titleName" id="titleName" th:value="${item?.titleName}"/>
+	naverID:<Input type="text" name="naverID" id="naverID" th:value="${item?.naverID}"/>
+	nikeName:<Input type="text" name="nikeName" id="nikeName" th:value="${item?.nikeName}"/>
+	memo:<Input type="text" name="memo" id="memo" th:value="${item?.memo}"/>
+	
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick = function(){
+		document.getElementById("form").submit();
+	}
+	
+	
+
+	
+	
+</script>
+</body>
+</html>

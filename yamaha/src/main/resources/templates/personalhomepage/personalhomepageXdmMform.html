@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/personalhomepage/personalhomepageXdmUpdt" method="post" id="form">
+<input type="hidden" name="seq" th:value="${item?.seq}"/>
+	seq:<Input type="text" name ="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/> 
+	homePageAddress:<Input type="text" name="homePageAddress" id="homePageAddress" th:value="${item?.homePageAddress}"/>
+	representhomePage:<Input type="text" name ="representhomePage" id="representhomePage" th:value="${item?.representhomePage}"/>
+	addNaverAddress_seq:<Input type="text" name="addNaverAddress_seq" id="addNaverAddress_seq" th:value="${item?.addNaverAddress_seq}"/>
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick = function(){
+		document.getElementById("form").submit();
+	}
+	
+	
+
+	
+	
+	
+</script>
+
+
+</body>
+</html>

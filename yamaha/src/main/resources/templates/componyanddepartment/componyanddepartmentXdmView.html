@@ -15,6 +15,9 @@
 		<td th:text = "${item.companyName}"></td>
 	</tr>		
 </table>
+<a href="/componyanddepartment/componyanddepartmentXdmList">목록</a>
+<a>삭제</a>
+<a th:href="@{/componyanddepartment/componyanddepartmentXdmMform(seq=${item.seq})}">수정</a>
 
 </body>
 </html>

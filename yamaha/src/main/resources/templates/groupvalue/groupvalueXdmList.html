@@ -13,11 +13,11 @@
 	</tr>
 	<tr th:each="list : ${list}"> 
 		<td th:text = "${list.seq}"></td>
-		<td th:text = "${list.addNaverAddress_seq}"></td>
+		<td><a th:href="@{/groupvalue/groupvalueXdmView(seq=${list.seq})}" th:text = "${list.addNaverAddress_seq}"></a></td>
 		<td th:text = "${list.groupInput_seq}"></td>
 		
 	</tr>		
 </table>
-
+<a href="/groupvalue/groupvalueXdmForm">등록</a>
 </body>
 </html>

@@ -15,4 +15,29 @@ public String codeGroupXdmList(Model model) {
 	model.addAttribute("list", groupinputService.selectList());
 	return "groupinput/groupinputXdmList";
 }
+@RequestMapping(value = "/groupinput/groupinputXdmView")
+public String groupinputXdmView(Model model, GroupinputDto groupinputDto) {
+	model.addAttribute("item", groupinputService.selectOne(groupinputDto));
+	return "groupinput/groupinputXdmView";
+}
+@RequestMapping(value = "/groupinput/groupinputXdmForm")
+public String groupinputXdmForm() {
+	
+	return "groupinput/groupinputXdmForm";
+}
+@RequestMapping(value = "/groupinput/groupinputXdmInst")
+public String groupinputXdmInst(GroupinputDto groupinputDto) {
+	groupinputService.insert(groupinputDto);
+	return "redirect:/groupinput/groupinputXdmList";
+}
+@RequestMapping(value = "/groupinput/groupinputXdmMform")
+public String groupinputXdmMform(Model model,GroupinputDto groupinputDto ) {
+	model.addAttribute("item", groupinputService.selectOne(groupinputDto));
+	return "/groupinput/groupinputXdmMform";
+}
+@RequestMapping(value = "/groupinput/groupinputXdmUpdt")
+public String groupinputXdmUpdt(GroupinputDto groupinputDto) {
+	groupinputService.update(groupinputDto);
+	return "redirect:/groupinput/groupinputXdmList";
+}
 }

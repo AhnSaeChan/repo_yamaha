@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/componyanddepartment/componyanddepartmentXdmInst" method="post" id="form">
+	<input type="hidden" name="seq" th:value="${item?.seq}"/> 
+	seq:<Input type="text" name ="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/> 
+	companyName:<Input type="text" name="companyName" id="companyName" th:value="${item?.companyName}"/>
+	department:<Input type="text" name ="department" id="department" th:value="${item?.department}"/>
+	workingPosition:<Input type="text" name="workingPosition" id="workingPosition" th:value="${item?.workingPosition}"/>
+	representCompany:<Input type="text" name="representCompany" id="representCompany" th:value="${item?.representCompany}"/>
+	addNaverAddress_seq:<Input type="text" name="addNaverAddress_seq" id="addNaverAddress_seq" th:value="${item?.addNaverAddress_seq}"/>
+	
+	
+	
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+document.getElementById("btnSave").onclick = function(){
+	document.getElementById("form").submit();
+}
+
+</script>
+
+
+</body>
+</html>

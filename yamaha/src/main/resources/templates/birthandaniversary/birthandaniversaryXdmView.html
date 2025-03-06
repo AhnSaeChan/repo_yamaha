@@ -7,21 +7,19 @@
 <table>
 	<tr>
 		<td>seq</td>
-		<td>email</td>
+		<td>birthdayType</td>
 		
 	</tr>
 	<tr> 
 		<td th:text = "${item.seq}"></td>
-		<td th:text = "${item.email}"></td>
-		
-		
+		<td th:text = "${item.birthdayType}"></td>
 		
 	</tr>		
 </table>
 
-<a href="/emailaddress/emailaddressXdmList">목록</a>
+<a href="/birthandaniversary/birthandaniversaryXdmList">목록</a>
 <a>삭제</a>
-<a th:href="@{/emailaddress/emailaddressXdmMform(seq=${item.seq})}">수정</a>
+<a th:href="@{/birthandaniversary/birthandaniversaryXdmMform(seq=${item.seq})}">수정</a>
 
 
 </body>

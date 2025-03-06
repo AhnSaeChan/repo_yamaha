@@ -13,5 +13,14 @@ BirthandaniversaryDao birthandaniversaryDaos;
 public List<BirthandaniversaryDto> selectList(){
 	return birthandaniversaryDaos.selectList();
 }
+public BirthandaniversaryDto selectOne(BirthandaniversaryDto birthandaniversaryDto ){
+	return birthandaniversaryDaos.selectOne(birthandaniversaryDto);
+}
+public int insert(BirthandaniversaryDto birthandaniversaryDto){
+	return birthandaniversaryDaos.insert(birthandaniversaryDto);
+}
+public int update (BirthandaniversaryDto birthandaniversaryDto){
+	return birthandaniversaryDaos.update(birthandaniversaryDto);
+}
 
 }
