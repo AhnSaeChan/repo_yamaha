@@ -36,4 +36,10 @@ public class EmailaddressService {
 	 public int update(EmailaddressDto emailaddressDto){ // 함수를 선언 ,Dto를 받겠다고 선언
 		 return emailaddressDaos.update(emailaddressDto); //하나씩 추가, 함수를 사용
 	 }
+	 public int delete(EmailaddressDto emailaddressDto){ // 함수를 선언 ,Dto를 받겠다고 선언
+		 return emailaddressDaos.delete(emailaddressDto); //하나씩 추가, 함수를 사용
+	 }
+	 public int uelete(EmailaddressDto emailaddressDto){ // 함수를 선언 ,Dto를 받겠다고 선언
+		 return emailaddressDaos.uelete(emailaddressDto); //하나씩 추가, 함수를 사용
+	 }
 }

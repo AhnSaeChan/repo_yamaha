@@ -10,4 +10,6 @@ import com.a3a3.fapp.emailaddress.EmailaddressDto;
 public interface PhonenumberDao {
 	public List<PhonenumberDto> selectList();
 	public PhonenumberDto selectOne(PhonenumberDto phonenumberDto);
+	public int insert(PhonenumberDto phonenumberDto);
+	public int update(PhonenumberDto phonenumberDto);
 }

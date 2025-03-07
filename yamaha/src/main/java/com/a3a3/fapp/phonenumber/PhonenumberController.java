@@ -22,4 +22,27 @@ public class PhonenumberController {
 		model.addAttribute("item", phonenumberService.selectOne(phonenumberDto));
 		return "phonenumber/phonenumberXdmView";
 	}
+	@RequestMapping(value = "/phonenumber/phonenumberXdmForm")
+	public String phonenumberXdmForm() {
+		return "phonenumber/phonenumberXdmForm";
+	}
+	@RequestMapping(value = "/phonenumber/phonenumberXdmInst")
+	public String phonenumberXdmInst(PhonenumberDto phonenumberDto) {
+		
+		phonenumberService.insert(phonenumberDto);
+		
+		return "redirect:/phonenumber/phonenumberXdmList";
+	}
+	@RequestMapping(value = "/phonenumber/phonenumberXdmMform")
+	public String phonenumberXdmMform(Model model ,PhonenumberDto phonenumberDto) {
+		
+		model.addAttribute("item", phonenumberService.selectOne(phonenumberDto));
+		return "phonenumber/phonenumberXdmMform";
+	}
+	@RequestMapping(value = "/phonenumber/phonenumberXdmUpdt")
+	public String phonenumberXdmUpdt(PhonenumberDto phonenumberDto) {
+		phonenumberService.update(phonenumberDto);
+		
+		return "redirect:/phonenumber/phonenumberXdmList";
+	}
 }

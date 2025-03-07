@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/socialnetworkservice/socialnetworkserviceXdmInst" method="post" id="form">
+	seq:<Input type="text" name ="seq" id="seq" maxlength="10" disabled/> 
+	snsType:<Input type="text" name="snsType" id="snsType"/>
+	snsAddress:<Input type="text" name ="snsAddress" id="snsAddress"/>
+	representSns:<Input type="text" name="representSns" id="representSns"/>
+	addNaverAddress_seq:<Input type="text" name="addNaverAddress_seq" id="addNaverAddress_seq"/>
+	
+	
+	
+	
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+document.getElementById("btnSave").onclick = function(){
+	document.getElementById("form").submit();
+}
+
+</script>
+
+
+</body>
+</html>

@@ -22,5 +22,11 @@ public int insert(AddressDto addressDto){
 public int update(AddressDto addressDto){
 	return addressDaos.update(addressDto);
 }
+public int delete(AddressDto addressDto){
+	return addressDaos.delete(addressDto);
+}
+public int uelete(AddressDto addressDto){
+	return addressDaos.uelete(addressDto);
+}
 
 }

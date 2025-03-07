@@ -40,4 +40,14 @@ public String birthandaniversaryXdmUpdt(BirthandaniversaryDto birthandaniversary
 	birthandaniversaryService.update(birthandaniversaryDto);
 	return  "redirect:/birthandaniversary/birthandaniversaryXdmList";
 }
+@RequestMapping(value = "/birthandaniversary/birthandaniversaryXdmDele")
+public String birthandaniversaryXdmDele(BirthandaniversaryDto birthandaniversaryDto) {
+	birthandaniversaryService.delete(birthandaniversaryDto);
+	return  "redirect:/birthandaniversary/birthandaniversaryXdmList";
+}
+@RequestMapping(value = "/birthandaniversary/birthandaniversaryXdmUele")
+public String birthandaniversaryXdmUele(BirthandaniversaryDto birthandaniversaryDto) {
+	birthandaniversaryService.uelete(birthandaniversaryDto);
+	return  "redirect:/birthandaniversary/birthandaniversaryXdmList";
+}
 }

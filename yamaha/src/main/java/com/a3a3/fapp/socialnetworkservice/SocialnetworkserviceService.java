@@ -13,4 +13,13 @@ SocialnetworkserviceDao socialnetworkserviceDaos;
 public List<SocialnetworkserviceDto> selectList(){
 	return socialnetworkserviceDaos.selectList();
 }
+public SocialnetworkserviceDto selectOne(SocialnetworkserviceDto socialnetworkserviceDto){
+	return socialnetworkserviceDaos.selectOne(socialnetworkserviceDto);
+}
+public int insert(SocialnetworkserviceDto socialnetworkserviceDto){
+	return socialnetworkserviceDaos.insert(socialnetworkserviceDto);
+}
+public int update(SocialnetworkserviceDto socialnetworkserviceDto){
+	return socialnetworkserviceDaos.update(socialnetworkserviceDto);
+}
 }

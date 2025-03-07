@@ -18,6 +18,7 @@
 		FROM
 			birthandaniversary
 		WHERE 1=1
+		AND delNY = 0
 		ORDER BY seq DESC
 	
 	</select>
@@ -67,6 +68,16 @@
 		representBirthday = #{representBirthday},
 		addNaverAddress_seq = #{addNaverAddress_seq}
 	WHERE seq = #{seq}
+	</update>
+	<delete id="delete">
+	DELETE FROM birthandaniversary
+	WHERE seq = #{seq}
+	</delete>
+	
+	<update id="uelete">
+	UPDATE birthandaniversary SET
+	delNY= 1 
+	WHERE seq =#{seq};
 	</update>
 	
 	

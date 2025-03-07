@@ -17,6 +17,7 @@
 		FROM 
 			address
 			WHERE 1=1
+			AND delNY = 0
 		    ORDER BY seq DESC
 	</select>
 	
@@ -63,6 +64,17 @@
 		representAddress = #{representAddress},
 		addNaverAddress_seq = #{addNaverAddress_seq}
 		
+	WHERE seq = #{seq}
+	</update>
+	
+	<delete id="delete">
+	DELETE FROM address
+	WHERE seq = #{seq}
+	</delete>
+	
+	<update id="uelete">
+	UPDATE address SET
+	delNY =1
 	WHERE seq = #{seq}
 	</update>
 	

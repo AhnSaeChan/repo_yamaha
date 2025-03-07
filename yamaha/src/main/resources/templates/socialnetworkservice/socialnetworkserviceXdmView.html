@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>snsType</td>
+		
+	</tr>
+	<tr> 
+		<td th:text = "${item.seq}"></td>
+		<td th:text = "${item.snsType}"></td>
+		
+	</tr>		
+</table>
+
+<a href="/socialnetworkservice/socialnetworkserviceXdmList">목록</a>
+<a th:href="@{/socialnetworkservice/socialnetworkserviceXdmDele(seq=${item.seq})}" id="delete">삭제</a>
+<a th:href="@{/socialnetworkservice/socialnetworkserviceXdmMform(seq=${item.seq})}">수정</a>
+<a th:href="@{/socialnetworkservice/socialnetworkserviceXdmXdmUele(seq=${item.seq})}" id="uelete">업제</a>
+</body>
+</html>

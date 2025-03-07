@@ -21,6 +21,7 @@
 		FROM
 			addnaveraddress
 		WHERE 1=1
+			AND delNY = 0
 		ORDER BY seq DESC
 	
 	</select>
@@ -83,5 +84,19 @@ INSERT INTO addnaveraddress(
 	
 	WHERE seq = #{seq}
 </update>
+
+<delete id="delete">
+		DELETE FROM addnaveraddress
+		WHERE seq = #{seq}	
+</delete>
+
+<update id="uelete">
+		UPDATE addnaveraddress set
+		
+		delNY= 1
+		
+		WHERE seq= #{seq}
+</update>
+
 	
 </mapper>

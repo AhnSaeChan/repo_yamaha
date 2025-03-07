@@ -24,4 +24,10 @@ public int insert(AddnaveraddressDto addnaveraddressDto){
 public int update(AddnaveraddressDto addnaveraddressDto){
 	return addnaveraddressDaos.update(addnaveraddressDto);
 }
+public int delete(AddnaveraddressDto addnaveraddressDto){
+	return addnaveraddressDaos.delete(addnaveraddressDto);
+}
+public int uelete(AddnaveraddressDto addnaveraddressDto){
+	return addnaveraddressDaos.uelete(addnaveraddressDto);
+}
 }

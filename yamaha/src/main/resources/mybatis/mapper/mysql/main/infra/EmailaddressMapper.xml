@@ -14,6 +14,7 @@
 		FROM
 			emailaddress
 		where 1=1
+			AND delNY = 0
 		ORDER BY seq DESC
 	</select>
 	
@@ -57,5 +58,17 @@
 		WHERE seq = #{seq}
 	</update>
 	
+	<delete id="delete">
+		DELETE FROM emailaddress
+		WHERE seq = #{seq}
+	</delete>
 	
+	<update id="uelete">
+		
+		UPDATE emailaddress SET
+		
+			delNY = 1
+		
+		WHERE seq = #{seq}
+	</update>
 </mapper>

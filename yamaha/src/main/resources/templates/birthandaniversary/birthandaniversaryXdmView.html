@@ -18,9 +18,29 @@
 </table>
 
 <a href="/birthandaniversary/birthandaniversaryXdmList">목록</a>
-<a>삭제</a>
+<a th:href="@{/birthandaniversary/birthandaniversaryXdmDele(seq=${item.seq})}" id="delete">삭제</a>
 <a th:href="@{/birthandaniversary/birthandaniversaryXdmMform(seq=${item.seq})}">수정</a>
+<a th:href="@{/birthandaniversary/birthandaniversaryXdmUele(seq=${item.seq})}" id="uelete">업제</a>
 
+<script type="text/javascript">
+
+document.getElementById("uelete").onclick = function(){
+	if(confirm("정말로")){
+		// 삭제 확인
+	}else{
+		// 아무것도 하지 않는다
+	 	return false;	
+	}
+}
+document.getElementById("delete").onclick = function(){
+	if(confirm("삭제?")){
+		
+	}else{
+		return false;
+	}
+}
+
+</script>
 
 </body>
 </html>

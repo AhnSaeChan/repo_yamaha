@@ -64,5 +64,23 @@ public class AddnaveraddressController {
 		
 		
 	}
+	@RequestMapping(value = "/addnaveraddress/addnaveraddressXdmDele")
+	public String addnaveraddressXdmDele(AddnaveraddressDto addnaveraddressDto) {
+		
+		addnaveraddressService.delete(addnaveraddressDto);
+		
+		return "redirect:/addnaveraddress/addnaveraddressXdmList";
+		
+		
+	}
+	@RequestMapping(value = "/addnaveraddress/addnaveraddressXdmUele")
+	public String addnaveraddressXdmUele(AddnaveraddressDto addnaveraddressDto) {
+		
+		addnaveraddressService.uelete(addnaveraddressDto);
+		
+		return "redirect:/addnaveraddress/addnaveraddressXdmList";
+		
+		
+	}
 
 }

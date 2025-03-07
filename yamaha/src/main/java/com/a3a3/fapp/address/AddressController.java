@@ -46,6 +46,20 @@ public class AddressController {
 		
 		return "redirect:/address/addressXdmList";
 	}
+	@RequestMapping(value = "/address/addressXdmDele")
+	public String addressXdmDele(AddressDto addressDto ) {
+		
+		addressService.delete(addressDto);
+		
+		return "redirect:/address/addressXdmList";
+	}
+	@RequestMapping(value = "/address/addressXdmUele")
+	public String addressXdmUele(AddressDto addressDto ) {
+		
+		addressService.uelete(addressDto);
+		
+		return "redirect:/address/addressXdmList";
+	}
 	
 	
 }

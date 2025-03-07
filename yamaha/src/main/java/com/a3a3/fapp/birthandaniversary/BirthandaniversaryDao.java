@@ -7,5 +7,7 @@ public interface BirthandaniversaryDao {
 	public BirthandaniversaryDto selectOne(BirthandaniversaryDto birthandaniversaryDto);
 	public int insert(BirthandaniversaryDto birthandaniversaryDto);
 	public int update(BirthandaniversaryDto birthandaniversaryDto);
+	public int delete(BirthandaniversaryDto birthandaniversaryDto);
+	public int uelete(BirthandaniversaryDto birthandaniversaryDto);
 	
 }

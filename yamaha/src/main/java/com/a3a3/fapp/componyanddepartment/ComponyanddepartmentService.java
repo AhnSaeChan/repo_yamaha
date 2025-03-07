@@ -22,4 +22,10 @@ public int insert(ComponyanddepartmentDto componyanddepartmentDto){
 public int update(ComponyanddepartmentDto componyanddepartmentDto){
 	 return componyanddepartmentDaos.update(componyanddepartmentDto);
 	}
+public int delete(ComponyanddepartmentDto componyanddepartmentDto){
+	 return componyanddepartmentDaos.delete(componyanddepartmentDto);
+	}
+public int uelete(ComponyanddepartmentDto componyanddepartmentDto){
+	 return componyanddepartmentDaos.uelete(componyanddepartmentDto);
+	}
 }

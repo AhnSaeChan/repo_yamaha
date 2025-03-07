@@ -10,4 +10,6 @@ public interface ComponyanddepartmentDao {
 	public ComponyanddepartmentDto selectOne(ComponyanddepartmentDto componyanddepartmentDto);
 	public int insert(ComponyanddepartmentDto componyanddepartmentDto);
 	public int update(ComponyanddepartmentDto componyanddepartmentDto);
+	public int delete(ComponyanddepartmentDto componyanddepartmentDto);
+	public int uelete(ComponyanddepartmentDto componyanddepartmentDto);
 }

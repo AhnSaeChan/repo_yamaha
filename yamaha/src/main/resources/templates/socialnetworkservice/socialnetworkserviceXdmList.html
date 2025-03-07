@@ -14,12 +14,15 @@
 	</tr>
 	<tr th:each="list : ${list}"> 
 		<td th:text = "${list.seq}"></td>
-		<td th:text = "${list.snsType}"></td>
+		<td><a th:href="@{/socialnetworkservice/socialnetworkserviceXdmView(seq=${list.seq})}" th:text = "${list.snsType}"></a></td>
 		<td th:text = "${list.snsAddress}"></td>
 		<td th:text = "${list.representSns}"></td>
 		<td th:text = "${list.addNaverAddress_seq}"></td>
 	</tr>		
 </table>
+<br>
+<a href="/socialnetworkservice/socialnetworkserviceXdmForm">등록</a>
+
 
 </body>
 </html>

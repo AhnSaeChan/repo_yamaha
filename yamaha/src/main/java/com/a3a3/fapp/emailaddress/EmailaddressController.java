@@ -75,5 +75,19 @@ public class EmailaddressController {
 		
 		return "redirect:/emailaddress/emailaddressXdmList";
 	}
+	@RequestMapping(value = "/emailaddress/emailaddressXdmDele")
+	public String emailaddressXdmDele(EmailaddressDto emailaddressDto) {
+		
+		emailaddressService.delete(emailaddressDto);
+		
+		return "redirect:/emailaddress/emailaddressXdmList";
+	}
+	@RequestMapping(value = "/emailaddress/emailaddressXdmUele")
+	public String emailaddressXdmUele(EmailaddressDto emailaddressDto) {
+		
+		emailaddressService.uelete(emailaddressDto);
+		
+		return "redirect:/emailaddress/emailaddressXdmList";
+	}
 	
 }

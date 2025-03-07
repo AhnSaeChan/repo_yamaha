@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/phonenumber/phonenumberXdmInst" method="post" id="form">
+	seq:<Input type="text" name ="seq" id="seq" maxlength="10" disabled/> 
+	cellPhoneType:<Input type="text" name="cellPhoneType" id="cellPhoneType"/>
+	phoneNumber:<Input type="text" name ="phoneNumber" id="phoneNumber"/>
+	representPhoneNumber:<Input type="text" name="representPhoneNumber" id="representPhoneNumber"/>
+	addNaverAddress_seq:<Input type="text" name="addNaverAddress_seq" id="addNaverAddress_seq"/>
+	
+	
+	<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+document.getElementById("btnSave").onclick = function(){
+	document.getElementById("form").submit();
+}
+
+</script>
+
+
+</body>
+</html>

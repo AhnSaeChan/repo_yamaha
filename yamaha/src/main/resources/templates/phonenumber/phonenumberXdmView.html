@@ -17,6 +17,11 @@
 		
 	</tr>		
 </table>
+<a href="/phonenumber/phonenumberXdmList">목록</a>
+<a th:href="@{/phonenumber/phonenumberXdmDele(seq=${item.seq})}" id="delete">삭제</a>
+<a th:href="@{/phonenumber/phonenumberXdmMform(seq=${item.seq})}">수정</a>
+<a th:href="@{/phonenumber/phonenumberXdmUele(seq=${item.seq})}" id="uelete">업제</a>
+
 
 </body>
 </html>

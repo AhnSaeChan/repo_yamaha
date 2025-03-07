@@ -16,6 +16,7 @@
 		FROM
 			componyanddepartment
 			WHERE 1=1
+			AND delNY = 1
 		ORDER BY seq DESC
 	
 	</select>
@@ -65,7 +66,17 @@
 		addNaverAddress_seq = #{addNaverAddress_seq}
 
 	WHERE seq = #{seq} 
-	</update>	
+	</update>
+	<delete id="delete">
+	DELETE FROM componyanddepartment
+	WHERE seq = #{seq}
+	</delete>	
+	
+	<update id="uelete">
+	UPDATE componyanddepartment SET
+	delNY =0
+	WHERE seq = #{seq}
+	</update>
 	
 	
 </mapper>

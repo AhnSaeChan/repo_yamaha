@@ -7,5 +7,7 @@ public interface AddnaveraddressDao {
 	public AddnaveraddressDto selectOne(AddnaveraddressDto addnaveraddressDto);
 	public int insert(AddnaveraddressDto addnaveraddressDto);
 	public int update(AddnaveraddressDto addnaveraddressDto);
+	public int delete(AddnaveraddressDto addnaveraddressDto);
+	public int uelete(AddnaveraddressDto addnaveraddressDto);
 	
 }

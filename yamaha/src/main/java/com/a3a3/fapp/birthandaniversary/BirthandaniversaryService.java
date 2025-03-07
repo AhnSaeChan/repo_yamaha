@@ -22,5 +22,11 @@ public int insert(BirthandaniversaryDto birthandaniversaryDto){
 public int update (BirthandaniversaryDto birthandaniversaryDto){
 	return birthandaniversaryDaos.update(birthandaniversaryDto);
 }
+public int delete (BirthandaniversaryDto birthandaniversaryDto){
+	return birthandaniversaryDaos.delete(birthandaniversaryDto);
+}
+public int uelete (BirthandaniversaryDto birthandaniversaryDto){
+	return birthandaniversaryDaos.uelete(birthandaniversaryDto);
+}
 
 }

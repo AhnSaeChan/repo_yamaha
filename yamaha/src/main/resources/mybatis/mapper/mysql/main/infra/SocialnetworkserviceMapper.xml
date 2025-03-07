@@ -18,5 +18,48 @@
 		ORDER BY seq DESC
 	
 	</select>
+
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			seq,
+		    snsType
+    
+		FROM
+			socialnetworkservice
+		WHERE 1=1
+			AND seq = #{seq}
+		ORDER BY seq DESC
+
+	</select>
+	
+	<insert id="insert">
+	INSERT INTO socialnetworkservice(
+		
+		snsType,
+		snsAddress,
+		representSns,
+		addNaverAddress_seq
+	
+	)VALUES(
+		
+		#{snsType},
+		#{snsAddress},
+		#{representSns},
+		#{addNaverAddress_seq}
+	)
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
+	<update id="update">
+		
+		UPDATE socialnetworkservice SET
+		snsType = #{snsType},
+		snsAddress = #{snsAddress},
+		representSns = #{representSns},
+		addNaverAddress_seq = #{addNaverAddress_seq}
+		WHERE seq = #{seq}
+	</update>
 	
 </mapper>

@@ -39,9 +39,21 @@ public class ComponyanddepartmentController {
 		return "/componyanddepartment/componyanddepartmentXdmMform";
 	}
 	@RequestMapping(value = "/componyanddepartment/componyanddepartmentXdmUpdt")
-	public String codeGroupXdmViewcomponyanddepartmentXdmUpdt(ComponyanddepartmentDto componyanddepartmentDto) {
+	public String componyanddepartmentXdmUpdt(ComponyanddepartmentDto componyanddepartmentDto) {
 		
 		componyanddepartmentService.update(componyanddepartmentDto);
+		return "redirect:/componyanddepartment/componyanddepartmentXdmList";
+	}
+	@RequestMapping(value = "/componyanddepartment/componyanddepartmentXdmDele")
+	public String componyanddepartmentXdmDele(ComponyanddepartmentDto componyanddepartmentDto) {
+		
+		componyanddepartmentService.delete(componyanddepartmentDto);
+		return "redirect:/componyanddepartment/componyanddepartmentXdmList";
+	}
+	@RequestMapping(value = "/componyanddepartment/componyanddepartmentXdmUele")
+	public String componyanddepartmentXdmUele(ComponyanddepartmentDto componyanddepartmentDto) {
+		
+		componyanddepartmentService.uelete(componyanddepartmentDto);
 		return "redirect:/componyanddepartment/componyanddepartmentXdmList";
 	}
 	

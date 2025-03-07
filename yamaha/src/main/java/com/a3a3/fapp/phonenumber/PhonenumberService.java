@@ -16,4 +16,11 @@ public class PhonenumberService {
 	public PhonenumberDto selectOne(PhonenumberDto phonenumberDto){
 		return phonenumberDaos.selectOne(phonenumberDto);
 	}
+	public int insert(PhonenumberDto phonenumberDto){
+		return phonenumberDaos.insert(phonenumberDto);
+	}
+	public int update(PhonenumberDto phonenumberDto){
+		return phonenumberDaos.update(phonenumberDto);
+	}
+	
 }
